@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root{
+    --color-light-50: #f8fafc;
+
+    --color-dark-50: #797984;
+    --color-dark-100: #6b2016;
+    --color-dark-900: #000;
+}
+*{
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#container-login{
+    /* V = view, H = height que significa altura,
+     então 100vh é toda altura visível do seu navegador */
+    background: rgb(221, 111, 43);
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#midia-social img{
+    width: 35px;
+}
+#midia-social{
+    display: flex;
+    justify-content: space-around;
+}
+#midia-social img:hover{
+    transform: scale(1.2);
+}
+
+#login-formulario{
+    background-color: var(--color-light-50);
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    border-radius: 8px;
+    gap: 30px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.366);
+    height: fit-content;
+    animation: dark-to-light 0.3s ease-in-out;
+   
+
+    /*gap = mesmo espacamento entre o login, os icones, o formulario e o botao*/
+}
+#header-form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#header-form h1{
+    font-size: 40px;
+    position: relative;
+}
+#header-form h1::before{
+    position: absolute;
+    content: '';
+    width: 45%;
+    background-color:  #350c0c;
+    height: 3.01px;
+    bottom: 6px;
+    border-radius: 5px;
+}
+
+#icon-moon{
+    cursor: pointer;
+    font-size: 26pxs;
+}
+#inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.input.container label{
+    font-size: 14px;
+    color: var(--color-dark-50);
+}
+.input-campo{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 3px;
+    cursor: text;
+    border-bottom: 1px solid #1f0808;
+}
+
+.input-campo i{
+    font-size: 18px;
+    color: var(--color-dark-900);
+}
+.input-campo input{
+    border: none;
+    background-color: transparent;
+    width: 260px;
+    font-size: 18px;
+    padding: 0px 5px;
+}
+.input-campo input:focus{
+    outline: none;
+}
+#login-button{
+    border: none;
+    background:  rgb(59, 18, 6);
+    color: var(--color-light-50);
+    padding: 7px;
+    font-size: 18px;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+#login-button:hover {
+    transform: scale(1.05);
+}
+
+.dark#login-formulario {
+    color: var(--color-light-50);
+    background-color: var(--color-dark-100);
+    animation: light-to-dark 0.3s ease-in-out;
+}
+
+.dark#login-formulario .input-campo input,
+.dark#login-formulario .input-campo i {
+    color: var(--color-light-50);
+}
+@keyframes dark-to-light {
+    0% {
+        background-color: var(--color-dark-100);
+    }
+    100% {
+        background-color: var(--color-light-50);
+    }
+}
+@keyframes light-to-dark {
+    0% {
+        background-color: var(--color-light-50);
+    }
+    100% {
+        background-color: var(--color-dark-100);
+    }
+}
+
+
